@@ -10,6 +10,9 @@ body {
 	background: url("/images/background.jpg");
 	font-family: Arial, Helvetica, Verdana, sans-serif;
 	font-size: 14px;
+	max-width: 1050px;
+	min-width: 320px;
+    margin: 30px auto;
 }
 a {
 	cursor: pointer;
@@ -32,7 +35,6 @@ fieldset {
 }
 
 
-
 /* 
 ------------------------------------------------
 				Главная обёртка 
@@ -40,8 +42,6 @@ fieldset {
 */
 
 .wrapp-all {
-	margin: 30px auto;
-	width: 1050px;
 	background-color: #FFFFFF;
     -o-box-shadow: 0 0 30px rgba(0,0,0,0.7);
     -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.7);
@@ -56,7 +56,6 @@ fieldset {
 */
 
 .head {
-    height: 35px;
     background-color: #FFDE00;
 	.main-nav {
     	color: #aaa;
@@ -72,15 +71,19 @@ fieldset {
 	}
 	.login {
 		color: #aaa;
-    	padding: 9px 0px 0px;
-    	float: right;
-    	margin-right: 30px;
-    	font-weight: normal;
-    	border-bottom: 1px #aaa dashed;
-    	&:hover {
-    		color: white;
-    		border-bottom: 1px #fff dashed;
-    	}
+		display: inline-block;
+   		padding: 9px 0px 0px;
+   		float: right;
+   		margin-right: 30px;
+   		font-weight: normal;
+   		border-bottom: 1px #aaa dashed;
+   		&:hover {
+   			color: white;
+   			border-bottom: 1px #fff dashed;
+   		}
+	}
+	.img-homer-head {
+		width: 87%;
 	}
 }
 .wrapp-head {
@@ -88,7 +91,6 @@ fieldset {
     margin-top: 0px;
     padding: 0px 0px 0px 30px;
     .logo {
-    	width: 400px;
     	float: left;
 		margin: 31px 0px;
 		.nameSite {
@@ -105,13 +107,13 @@ fieldset {
 		}
 	}
 	.img-homer-head {
-    	float: left;
-    	margin: 29px 0px 0px 74px;
+    	float: right;
+    	margin: 29px 110px 0px 0px;
 	}	
 	.wrapp-links {
     	width: 75px;
-    	margin: 60px 0px 0px 12px;
-    	float: left;	
+    	margin: -65px 18px 0px 0px;
+    	float: right;	
 
 //  Оформление "RSS" и "B" 
 
@@ -132,7 +134,7 @@ fieldset {
     		&:hover {
     			background-color: #F09836;
     		}
-		}
+		} 
 		.vk {
 			.rss;
 			&:hover {
@@ -249,11 +251,12 @@ fieldset {
 }
 
 .content {
-    width: 750px;
-    max-width: 100%;
-    margin-top: 30px;
-    padding: 0px 0px 0px 30px;
+    width: 70%;
+    padding: 30px 0px 0px 30px;
     float: left;
+    .family-photo {
+    	width: 87%;
+    }
 	.date {
 		color: #777;
     	font-size: 12px;
@@ -297,12 +300,16 @@ fieldset {
 	margin-top: 23px;
 }
 .wrapp-info-block {
-	width: 351px;
-	float: left;
-   	margin-right: 24px;
+	width: 48%;
+    float: left;
+    .img-info {
+    	width: 100%;
+    }
+}
+.info {
+	margin-left: 22px;
 }
 .cap-section {
-   	height: 34px;
    	margin-bottom: 10px;
    	padding: 8px 36px;
    	background: url("/images/111.png") no-repeat, 
@@ -354,25 +361,20 @@ fieldset {
    	padding-left: 15px;
 }
 
-// Прочее 
+// Блок "прочее" 
 
 .wrapp-other {
-	width: 727px;
-	margin-top: 30px;
-	.cap-other {
-		.other {
-			width: 100%;
-		    height: 34px;
-			margin-top: 9px;
-			margin-bottom: 0px;
-		 	padding: 8px 30px;
-		    background: #FFDE00 url("/images/111.png") no-repeat 324px 0px;
-		    box-sizing: border-box;
-			clear: both;
-			font-size: 16px;
-    		font-weight: normal;
-    		color: #000000;
-		}
+    margin-top: 30px;
+    margin-right: 8px;
+	.other {
+		margin-bottom: 0px;
+    	padding: 8px 30px;
+    	background: #FFDE00 url("/images/111.png") no-repeat 324px 0px;
+    	box-sizing: border-box;
+    	clear: both;
+    	font-size: 16px;
+    	font-weight: normal;
+    	color: #000000;
 	}
 	.wrapp-box {
 		margin: 10px 0px 15px 0px;
@@ -611,5 +613,325 @@ fieldset {
     }
 }
 
+/*
+------------------------------------------------------------
+					Медиа-запросы
+------------------------------------------------------------
+*/
 
+@media screen and (max-width: 1024px) {
+	body {
+		margin: 0px;
+	}
+	.wrapp-head	{
+		background: url('/images/homer.png') no-repeat 424px 29px;
+		.img-homer-head {
+			display: none;
+		}
+		.wrapp-links {
+			margin: 65px 18px 0px 0px;
+		}
+	}
+	.content {
+		width: 67%;
+	}
+}
 
+@media screen and (max-width: 960px) {
+	.wrapp-head	{
+		padding: 0px;
+		.logo {
+    		float: left;
+			margin: 31px 0px 31px 30px;
+		}
+	}	
+	.navigation {
+    	margin-right: 0px;
+    } 
+	.content {
+		width: inherit;
+	    padding: 10px 10px;
+    	.family-photo {
+    		width: 100%;
+    	}
+    }
+    .info {
+    	margin-left: 4%;
+    }
+	.side-bar {
+		width: 100%;
+		float: none;
+		background-color: #f0f0f0;
+		border: none;
+		clear: both;
+		padding: 20px;
+    	box-sizing: border-box;
+	}
+	.wrapp-other {
+		margin-right: 0px;
+		.other {
+		    background: #FFDE00 url("/images/111.png") no-repeat 484px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.wrapp-other {
+		margin-right: 0px;
+		.other {
+		    background: #FFDE00 url("/images/111.png") no-repeat 414px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.wrapp-head	{
+		.wrapp-links {
+			display: none;
+		}
+	}
+	.wrapp-other {
+		margin-right: 0px;
+		.other {
+		    background: #FFDE00 url("/images/111.png") no-repeat 364px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.cap-section {
+		background: url("/images/111.png") no-repeat -16px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.img {
+		.cap-section;
+		background: url("/images/111.png") no-repeat -16px 0px,
+					url("/images/default.png") no-repeat 9px 10px;
+		background-color: #FFDE00;
+	}
+	.wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat 300px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 645px) {
+	.wrapp-info-block {
+		float: none;
+		width: inherit;
+	}
+	.info {
+		margin-left: 0px;
+		margin-top: 15px;
+	}
+	.cap-section {
+		background: url("/images/111.png") no-repeat 244px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.img {
+		.cap-section;
+		background: url("/images/111.png") no-repeat 244px 0px, 
+					url("/images/default.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat 244px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.wrapp-head	{
+		background: none;
+		.logo {
+			float: none;
+    		text-align: center;
+		}
+	}
+	.cap-section {
+		background: url("/images/111.png") no-repeat 175px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.img {
+		.cap-section;
+		background: url("/images/111.png") no-repeat 174px 0px, 
+					url("/images/default.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat 174px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 485px) {
+	.wrapp-head {
+		.logo {
+			float: left;
+    		text-align: inherit;
+    		margin: 30px 0px;
+    		padding: 0px 28px;
+    	    box-sizing: border-box;
+			.nameSite {
+			    font-family: 'EBGaramond';
+    			font-size: 56px;
+    			font-weight: bold;
+    			text-transform: uppercase;
+    			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    			padding-left: 0px;
+    			line-height: 56px;
+			}
+			.description-site {
+			    color: #aaa;
+    			padding-left: 0px;
+			}
+		}
+		.wrapp-links {
+    		display: inline-block;
+    		margin: 0px 0px 20px 30px;
+    		float: none;
+    	}	
+	}
+	.navigation {
+   		.list-navigation {
+   			.list-head {
+   				.section-title {
+   					color: black;
+   					font-size: 13px;
+   					display: block;
+    				padding: 15px 14px 15px 15px;
+   					&:hover {
+   						background-color: rgba(10,10,10,0.2);
+    					color: #5a5a5a;	
+    				}	
+   				}
+   			}
+   		}
+	}
+	.drop-down-list {
+		left: -70px;
+	}
+	.cap-section {
+		background: url("/images/111.png") no-repeat 75px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.img {
+		.cap-section;
+		background: url("/images/111.png") no-repeat 75px 0px, 
+					url("/images/default.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+	}
+	.wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat 75px 0px;
+		}
+		.wrapp-box {
+			.picture {
+    			margin-right: 10px;
+			}
+			.depiction {
+				margin: 0px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.head {
+		.main-nav {
+	    	color: #aaa;
+	    	display: inline-block;
+	    	padding: 10px 0px 10px 10px;
+	    	font-weight: bold;
+	    	font-size: 13px;
+		}
+		.login {
+			color: #aaa;
+	    	padding: 10px 0px 0px 0px;
+	    	margin: 0px 10px 0px 0px;
+	    	font-weight: normal;
+	    	border-bottom: 1px #aaa dashed;
+	    }
+	}
+	.wrapp-head {
+    	margin-top: 0px;
+    	padding: 0px;	
+	}
+	.drop-down-list {
+		left: -70px;
+	}
+	.cap-section {
+		background: url("/images/111.png") no-repeat 35px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+    }
+    .img {
+    	.cap-section;
+		background: url("/images/111.png") no-repeat 35px 0px, 
+					url("/images/default.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+    }
+    .wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat 35px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.cap-section {
+		background: url("/images/111.png") no-repeat 25px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+    }
+    .img {
+    	.cap-section;
+		background: url("/images/111.png") no-repeat 25px 0px, 
+					url("/images/default.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+    }
+    .wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat 25px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.top-list {
+		position: relative;
+		width: 114px;
+		&:hover {
+			.drop-down-list {
+				opacity: 1;
+				top: 45px;
+			}
+		}
+	}
+	.drop-down-list {
+		left: -86px;
+	}
+	.cap-section {
+		background: url("/images/111.png") no-repeat -15px 0px, 
+					url("/images/news.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+    }
+    .img {
+    	.cap-section;
+		background: url("/images/111.png") no-repeat -15px 0px, 
+					url("/images/default.png") no-repeat 9px 10px;
+    	background-color: #FFDE00;
+    }
+    .wrapp-other {
+		.other {
+			background: #FFDE00 url("/images/111.png") no-repeat -15px 0px;
+		}
+	}
+}
