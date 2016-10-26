@@ -1,6 +1,3 @@
-/node_modules/*
-/css/*
-node_modules/*
-css/*
-styles/*
-styles
+/node_modules
+/css
+/styles
