@@ -1,3 +1,4 @@
 # simpsons
 Fan site Simpsons
-https://belskiysergey.github.io/simpsons/
+
+View page: https://belskiysergey.github.io/simpsons/
